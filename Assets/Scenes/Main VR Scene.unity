@@ -2131,6 +2131,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca19a57fe84f44649970c053f683e6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pinchAnimationAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Pinch Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2d3d2525-437f-4a4b-a910-50e6f9ab7182
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  handAnimator: {fileID: 0}
 --- !u!1001 &1803217667
 PrefabInstance:
   m_ObjectHideFlags: 0

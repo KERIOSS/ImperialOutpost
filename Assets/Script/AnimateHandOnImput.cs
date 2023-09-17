@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class AnimateHandOnImput : MonoBehaviour
 {
     public InputActionProperty pinchAnimationAction;
+    public Animator handAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,9 @@ public class AnimateHandOnImput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float triggerValue = pinchAnimationAction.action.ReadValue<float>();
+        handAnimator.SetFloat("Trigger", triggerValue);
+
+        Debug.Log(triggerValue);
     }
 }
