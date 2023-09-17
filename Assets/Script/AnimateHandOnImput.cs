@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class AnimateHandOnImput : MonoBehaviour
 {
+    public InputActionProperty pinchAnimationAction;
+
     // Start is called before the first frame update
     void Start()
     {
