@@ -31,7 +31,7 @@ public class SpawnEnemy : MonoBehaviour
             System.Random randomZ = new System.Random();
             int randomNumberZ = randomZ.Next(12, 14);
             Instantiate(Enemy, new Vector3(randomNumberX, randomNumberY, randomNumberZ), Quaternion.identity);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             EnemyCount += 1;
             //x += 1;
             //y += 2;
@@ -54,23 +54,23 @@ public class SpawnEnemy : MonoBehaviour
     //    // Wyœwietlenie wygenerowanej liczby
     //    //Debug.Log("Wygenerowana losowa liczba: " + randomNumber);
     //} 
-    public void randomY()
-    {
-        // Inicjalizacja generatora liczb losowych
-        System.Random random = new System.Random();
-        int randomNumberY = random.Next(1, 5);
+    //public void randomY()
+    //{
+    //    // Inicjalizacja generatora liczb losowych
+    //    System.Random random = new System.Random();
+    //    int randomNumberY = random.Next(1, 5);
 
-        // Wyœwietlenie wygenerowanej liczby
-        //Debug.Log("Wygenerowana losowa liczba: " + randomNumber);
-    } 
-    public void randomZ()
-    {
-        // Inicjalizacja generatora liczb losowych
-        System.Random random = new System.Random();
-        int randomNumberZ = random.Next(12, 14);
+    //    // Wyœwietlenie wygenerowanej liczby
+    //    //Debug.Log("Wygenerowana losowa liczba: " + randomNumber);
+    //} 
+    //public void randomZ()
+    //{
+    //    // Inicjalizacja generatora liczb losowych
+    //    System.Random random = new System.Random();
+    //    int randomNumberZ = random.Next(12, 14);
 
-        // Wyœwietlenie wygenerowanej liczby
-        //Debug.Log("Wygenerowana losowa liczba: " + randomNumber);
-    }
+    //    // Wyœwietlenie wygenerowanej liczby
+    //    //Debug.Log("Wygenerowana losowa liczba: " + randomNumber);
+    //}
 
 }
