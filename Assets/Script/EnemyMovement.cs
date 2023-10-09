@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
     public float rotationSpeed, move, distanceOfPlayer, fow;
     private float distance;
     public GameObject player;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void  FixedUpdate()
     {
+        
         distance = Vector3.Distance(player.transform.position, transform.position);
         if (distance < fow)
         {
