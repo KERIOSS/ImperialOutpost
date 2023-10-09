@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-
+    public GameObject ReSpawnPointDestroy;
     public GameObject Enemy;
      int x;
      int y;
@@ -15,12 +15,10 @@ public class SpawnEnemy : MonoBehaviour
     public int EnemyNumbers;
     // Start is called before the first frame update
 
-    private void Awake()
-    {
-     
-    }
+
     void Start()
     {
+        new WaitForSeconds(respawnTime);
         StartCoroutine(EnemyDrop());
 
     }
@@ -50,7 +48,11 @@ public class SpawnEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (ReSpawnPointDestroy = null)
+        {
+            StartCoroutine(EnemyDrop());
+
+        }
     }
     //public void randomX()
     //{
