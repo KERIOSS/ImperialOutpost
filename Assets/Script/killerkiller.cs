@@ -10,7 +10,7 @@ public class killerkiller : MonoBehaviour
     //[SerializeField]
     //private float KwadratyInterwal = 4f;
     // Start is called before the first frame update
-    
+   
     void Start()
     {
         //StartCoroutine(SpawnEnemy((KwadratyInterwal, Kwadraty));
@@ -29,6 +29,7 @@ public class killerkiller : MonoBehaviour
         if (collision.gameObject.CompareTag("bullet"))
         {
             Destroy(collision.gameObject);
+           
             Debug.Log("Trafiony");
            
         }

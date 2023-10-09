@@ -5,10 +5,12 @@ using UnityEngine;
 public class SpawnSliceObjects : MonoBehaviour
 {
     public GameObject Enemy;
-    public int x;
-    public int y;
-    public int z;
-    public int EnemyCount;
+    int x;
+    int y;
+    int z;
+    int EnemyCount;
+    public int respawnTime;
+    public int EnemyNumbers;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class SpawnSliceObjects : MonoBehaviour
     {
 
 
-        while (EnemyCount < 10)
+        while (EnemyCount < EnemyNumbers)
         {
             System.Random randomX = new System.Random();
             int randomNumberX = randomX.Next(-4, 4);
@@ -29,7 +31,7 @@ public class SpawnSliceObjects : MonoBehaviour
             System.Random randomZ = new System.Random();
             int randomNumberZ = randomZ.Next(5, 12);
             Instantiate(Enemy, new Vector3(randomNumberX, randomNumberY, randomNumberZ), Quaternion.identity);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(respawnTime);
             EnemyCount += 1;
             //x += 1;
             //y += 2;

@@ -22,8 +22,12 @@ public class EnemyShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        ShootAtPlayer();
+        if (spawnEnemyBulletPoint != null)
+        {
+            ShootAtPlayer();
+        }
+        
+      
     }
 
     void ShootAtPlayer()
@@ -37,4 +41,15 @@ public class EnemyShoot : MonoBehaviour
         Destroy(bulletObj, 5f);
 
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("bullet"))
+        {
+            Destroy(collision.gameObject);
+          
+            Debug.Log("Trafiony");
+
+        }
+    }
+
 }
