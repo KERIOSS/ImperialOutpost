@@ -21,7 +21,7 @@ public class killerkillerWall : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-            Debug.Log("Trafiony");
+     
 
         }
     }
