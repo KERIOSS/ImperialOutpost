@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class killerkiller : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class killerkiller : MonoBehaviour
     //[SerializeField]
     //private float KwadratyInterwal = 4f;
     // Start is called before the first frame update
-   
-    void Start()
+
+    
+
+    private void Start()
     {
-        //StartCoroutine(SpawnEnemy((KwadratyInterwal, Kwadraty));
+       
     }
 
     // Update is called once per frame
@@ -29,9 +32,10 @@ public class killerkiller : MonoBehaviour
         if (collision.gameObject.CompareTag("bullet"))
         {
             Destroy(collision.gameObject);
-           
+            
             Debug.Log("Trafiony");
-           
+
+            ScoreManager.scorecount = +1;
         }
     }
 
