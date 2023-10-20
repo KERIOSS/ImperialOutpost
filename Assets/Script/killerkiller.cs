@@ -35,7 +35,7 @@ public class killerkiller : MonoBehaviour
             
             Debug.Log("Trafiony");
 
-            ScoreManager.scorecount = +1;
+            ScoreManager.scorecount += 1;
         }
     }
 

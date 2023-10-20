@@ -1424,7 +1424,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &373056447
 MonoBehaviour:
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 373056442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a6748bdc2e24c86608f1c51668c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8d132792c30114f8f6cc76d80d4603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &375798014
@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 399026436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a6748bdc2e24c86608f1c51668c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8d132792c30114f8f6cc76d80d4603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &670404668
@@ -1968,7 +1968,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
 --- !u!114 &809100458
 MonoBehaviour:
@@ -1979,7 +1979,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 809100453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a6748bdc2e24c86608f1c51668c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8d132792c30114f8f6cc76d80d4603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &902183656
@@ -2079,7 +2079,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!114 &902183661
 MonoBehaviour:
@@ -2090,7 +2090,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 902183656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a6748bdc2e24c86608f1c51668c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8d132792c30114f8f6cc76d80d4603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &928170068
@@ -3083,7 +3083,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1072785273
 MonoBehaviour:
@@ -3094,7 +3094,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1072785268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a6748bdc2e24c86608f1c51668c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8d132792c30114f8f6cc76d80d4603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1082149241
@@ -3279,7 +3279,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122699587
 GameObject:
@@ -3330,7 +3330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1125209403
 Transform:
   m_ObjectHideFlags: 0
@@ -3345,7 +3345,7 @@ Transform:
   m_Children:
   - {fileID: 1082149242}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165579776
 GameObject:
@@ -3898,7 +3898,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &1243999294
 MonoBehaviour:
@@ -3909,7 +3909,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1243999289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a6748bdc2e24c86608f1c51668c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8d132792c30114f8f6cc76d80d4603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1297600622
@@ -4307,7 +4307,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -180}
 --- !u!114 &1544608407
 MonoBehaviour:
@@ -4318,7 +4318,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544608402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a6748bdc2e24c86608f1c51668c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8d132792c30114f8f6cc76d80d4603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1589843099
@@ -5427,7 +5427,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &1876470224
 MonoBehaviour:
@@ -5438,7 +5438,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1876470219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a6748bdc2e24c86608f1c51668c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8d132792c30114f8f6cc76d80d4603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1910649372
@@ -5549,7 +5549,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1910649372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d9a6748bdc2e24c86608f1c51668c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8d132792c30114f8f6cc76d80d4603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1919107392
@@ -5585,6 +5585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Main VR Scene
+  scoreText: {fileID: 1740606231}
 --- !u!65 &1919107394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5661,5 +5662,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

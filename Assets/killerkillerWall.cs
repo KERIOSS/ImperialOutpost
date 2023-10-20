@@ -1,13 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class ResetScene : MonoBehaviour
+public class killerkillerWall : MonoBehaviour
 {
-    public string sceneToLoad = "Main VR Scene";
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +13,7 @@ public class ResetScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -25,13 +21,8 @@ public class ResetScene : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-            Debug.Log("Reset Poziomu");
-            SceneManager.LoadScene(sceneToLoad);
-
+            Debug.Log("Trafiony");
 
         }
     }
-
-  
-
 }
