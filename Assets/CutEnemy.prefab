@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
-  move: 2
+  move: 4
   distanceOfPlayer: 0
   fow: 66
   player: {fileID: 9087882652070817029, guid: e9276bcf75bd4a64bb09f679d3dff606, type: 3}

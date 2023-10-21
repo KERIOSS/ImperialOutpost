@@ -9,6 +9,7 @@ public class EnemyShoot : MonoBehaviour
     
     [SerializeField] private float timer = 5;
     private float bulletTime;
+    public int TimeBeforeFirstShoot;
 
     public GameObject enemyBullet;
     public Transform spawnEnemyBulletPoint;
@@ -24,7 +25,9 @@ public class EnemyShoot : MonoBehaviour
     {
         if (spawnEnemyBulletPoint != null)
         {
-            ShootAtPlayer();
+
+            Invoke("ShootAtPlayer", TimeBeforeFirstShoot); 
+            
         }
         
       
@@ -32,6 +35,7 @@ public class EnemyShoot : MonoBehaviour
 
     void ShootAtPlayer()
     {
+        
         bulletTime -= Time.deltaTime;
         if (bulletTime > 0) return;
         bulletTime = timer;

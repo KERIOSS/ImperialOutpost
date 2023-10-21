@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5
+  TimeBeforeFirstShoot: 3
   enemyBullet: {fileID: 843472338697435121, guid: f248b78d1ab81ae4ba6ae83bf1b29819,
     type: 3}
   spawnEnemyBulletPoint: {fileID: 3018188091675929281}

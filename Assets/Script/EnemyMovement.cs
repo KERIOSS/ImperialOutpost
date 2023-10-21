@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public float rotationSpeed, move, distanceOfPlayer, fow;
     private float distance;
-   public GameObject player;
+    public GameObject player;
    
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,10 @@ public class EnemyMovement : MonoBehaviour
                 transform.position += -transform.forward * move * Time.deltaTime;
             }
         }
-
+		if (distance<0.5)
+		{
+            Debug.Log("Zosta³eœ trafiony");
+            Destroy(gameObject);
+		}
     }
 }
