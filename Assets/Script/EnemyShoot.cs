@@ -10,7 +10,6 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField] private float timer = 5;
     private float bulletTime;
     public int TimeBeforeFirstShoot;
-
     public GameObject enemyBullet;
     public Transform spawnEnemyBulletPoint;
     public float enemySpeed;
@@ -25,17 +24,11 @@ public class EnemyShoot : MonoBehaviour
     {
         if (spawnEnemyBulletPoint != null)
         {
-
             Invoke("ShootAtPlayer", TimeBeforeFirstShoot); 
-            
         }
-        
-      
     }
-
     void ShootAtPlayer()
     {
-        
         bulletTime -= Time.deltaTime;
         if (bulletTime > 0) return;
         bulletTime = timer;
@@ -43,17 +36,13 @@ public class EnemyShoot : MonoBehaviour
         Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
         bulletRig.AddForce(bulletRig.transform.forward * enemySpeed);
         Destroy(bulletObj, 5f);
-
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("bullet"))
         {
             Destroy(collision.gameObject);
-          
-            Debug.Log("Trafiony");
-
-        }
+         }
     }
 
 }

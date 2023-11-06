@@ -32,9 +32,7 @@ public class killerkiller : MonoBehaviour
         if (collision.gameObject.CompareTag("bullet"))
         {
             Destroy(collision.gameObject);
-            
-            Debug.Log("Trafiony");
-
+ 
             ScoreManager.scorecount += 1;
         }
     }

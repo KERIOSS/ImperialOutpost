@@ -13,25 +13,21 @@ public class EnemyMovement : MonoBehaviour
     {
        
     }
-
     // Update is called once per frame
     void  FixedUpdate()
     {
-        
-
         distance = Vector3.Distance(player.transform.position, transform.position);
         if (distance < fow)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(transform.position - player.transform.position), rotationSpeed * Time.deltaTime);
 
-            if (distance >= distanceOfPlayer)
+            if (distance >= distanceOfPlayer)   
             {
                 transform.position += -transform.forward * move * Time.deltaTime;
             }
         }
 		if (distance<0.5)
 		{
-            Debug.Log("Zosta³eœ trafiony");
             Destroy(gameObject);
 		}
     }
