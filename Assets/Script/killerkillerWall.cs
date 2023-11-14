@@ -24,5 +24,12 @@ public class killerkillerWall : MonoBehaviour
      
 
         }
+        if (collision.gameObject.CompareTag("enemybullet"))
+        {
+            Destroy(collision.gameObject);
+
+
+
+        }
     }
 }
