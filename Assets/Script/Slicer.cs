@@ -34,8 +34,13 @@ public class Slicer : MonoBehaviour
 
     private void MakeItPhysical(GameObject obj)
     {
-        obj.AddComponent<MeshCollider>().convex = true;
-        obj.AddComponent<Rigidbody>();
+        Rigidbody rb = obj.AddComponent<Rigidbody>();
+        MeshCollider collider = obj.AddComponent<MeshCollider>();
+        collider.convex = true;
+        rb.AddExplosionForce(100, obj.transform.position, 1);
+        //obj.AddComponent<Rigidbody>();
+        //obj.AddComponent<MeshCollider>().convex = true;
+        
     }
 
     private SlicedHull SliceObject(GameObject obj, Material crossSectionMaterial = null)
