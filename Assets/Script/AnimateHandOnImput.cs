@@ -6,6 +6,8 @@ public class AnimateHandOnImput : MonoBehaviour
 {
     public InputActionProperty pinchAnimationAction;
     public InputActionProperty gripAnimationAction;
+    public InputActionProperty pinchAnimationAction2;
+
     public Animator handAnimator;
 
     // Start is called before the first frame update

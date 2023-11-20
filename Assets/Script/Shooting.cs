@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Shooting : MonoBehaviour
 {
-
     public GameObject bullet;
     public Transform spawnPoint;
     public float fireSpeed = 20;
@@ -28,6 +28,6 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
 }

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a200b6c9fe1faa842abf8b72495518f9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - hand: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+  - sword: {fileID: 6729614097497936427, guid: ac133d71460fce849a4f045e8eb6a470, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
