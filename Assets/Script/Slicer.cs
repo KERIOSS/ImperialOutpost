@@ -40,7 +40,8 @@ public class Slicer : MonoBehaviour
         rb.AddExplosionForce(100, obj.transform.position, 1);
         //obj.AddComponent<Rigidbody>();
         //obj.AddComponent<MeshCollider>().convex = true;
-        
+        ScoreManager.scorecount += 1;
+
     }
 
     private SlicedHull SliceObject(GameObject obj, Material crossSectionMaterial = null)

@@ -17,7 +17,12 @@ public class ResetScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if (ScoreManager.hppoint==0)
+		{
+            Debug.Log("Reset Poziomu");
+            SceneManager.LoadScene(sceneToLoad);
 
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

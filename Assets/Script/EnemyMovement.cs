@@ -29,7 +29,9 @@ public class EnemyMovement : MonoBehaviour
 		if (distance<0.5)
 		{
             Destroy(gameObject);
-		}
+            ScoreManager.hppoint -= 1;
+
+        }
     }
 
 }

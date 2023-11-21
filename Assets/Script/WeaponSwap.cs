@@ -8,7 +8,6 @@ public class WeaponSwap : MonoBehaviour
     public GameObject shield;
     public GameObject sword;
     public InputActionProperty Swap;
-    public GameObject kloc;
     private bool Bsword;
     //private bool Bshield;
     void Start()
@@ -31,7 +30,6 @@ public class WeaponSwap : MonoBehaviour
                 shield.SetActive(true);
                 Bsword = false;
                 Debug.Log("tarcza aktywowana");
-                kloc.SetActive(false);
             }
 			else
 			{
@@ -39,7 +37,6 @@ public class WeaponSwap : MonoBehaviour
                 sword.SetActive(true);
                 Bsword = true;
                 Debug.Log("Miecz aktywowany");
-                kloc.SetActive(true);
             }
 			//if (Bshield==true)
 			//{
@@ -50,20 +47,22 @@ public class WeaponSwap : MonoBehaviour
    //             Debug.Log("Miecz aktywowany");
    //         }
         }
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Debug.Log("Przycisk3");
-        }
-        if (Input.GetButtonDown("Fire2"))
-		{
-            Debug.Log("Przycisk2");
-		}
+
+  //      if (Input.GetButtonDown("Fire1"))
+  //      {
+  //          Debug.Log("Przycisk3");
+  //      }
+  //      if (Input.GetButtonDown("Fire2"))
+		//{
+  //          Debug.Log("Przycisk2");
+		//}
      
        
-        if (Input.GetButtonDown("Jump"))
-        {
-            Debug.Log("Przycisk4");
-        }
+  //      if (Input.GetButtonDown("Jump"))
+  //      {
+  //          Debug.Log("Przycisk4");
+  //      }
+
     }
 
     //private void ToggleModels()

@@ -11,6 +11,7 @@ public class SpawnSliceObjects : MonoBehaviour
     int EnemyCount;
     public int respawnTime;
     public int EnemyNumbers;
+
     // Start is called before the first frame update
     void Start()
     {
