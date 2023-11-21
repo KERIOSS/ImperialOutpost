@@ -33,8 +33,35 @@ public class SpawnSliceObjects : MonoBehaviour
             System.Random randomZ = new System.Random();
             int randomNumberZ = randomZ.Next(5, 12);
             Instantiate(Enemy, new Vector3(randomNumberX, randomNumberY, randomNumberZ), Quaternion.identity);
-            yield return new WaitForSeconds(respawnTime);
-            EnemyCount += 1;
+
+            if (ScoreManager.scorecount<10)
+			{
+                yield return new WaitForSeconds(respawnTime);
+            }
+			if (ScoreManager.scorecount>10)
+			{
+                yield return new WaitForSeconds(respawnTime-1);
+                Debug.Log(respawnTime);
+            }
+            if (ScoreManager.scorecount > 20)
+            {
+                yield return new WaitForSeconds(respawnTime -2);
+                Debug.Log(respawnTime);
+            }
+            if (ScoreManager.scorecount > 30)
+            {
+                yield return new WaitForSeconds(respawnTime / 4);
+                Debug.Log(respawnTime);
+            }
+            if (ScoreManager.scorecount > 40)
+            {
+                yield return new WaitForSeconds(respawnTime / 5);
+                Debug.Log(respawnTime);
+            }
+
+            //EnemyCount += 1;
+
+
             //x += 1;
             //y += 2;
             //z += 3;
