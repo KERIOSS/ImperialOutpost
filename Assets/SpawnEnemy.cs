@@ -19,9 +19,8 @@ public class SpawnEnemy : MonoBehaviour
     {
         new WaitForSeconds(respawnTime);
         StartCoroutine(EnemyDrop());
-        Debug.Log(respawnTime);
     }
-
+   
     IEnumerator EnemyDrop()
     {
 
@@ -34,55 +33,63 @@ public class SpawnEnemy : MonoBehaviour
 			System.Random randomZ = new System.Random();
 			int randomNumberZ = randomZ.Next(12, 14);
 			Instantiate(Enemy, new Vector3(randomNumberX, randomNumberY, randomNumberZ), Quaternion.identity);
-
-            if (ScoreManager.scorecount < 10)
-            {
-                yield return new WaitForSeconds(respawnTime);
-            }
-            if (ScoreManager.scorecount > 10)
-            {
-                yield return new WaitForSeconds(respawnTime - 1);
-                Debug.Log(respawnTime);
-            }
-            if (ScoreManager.scorecount > 20)
-            {
-                yield return new WaitForSeconds(respawnTime - 2);
-                Debug.Log(respawnTime);
-            }
-            if (ScoreManager.scorecount > 30)
-            {
-                yield return new WaitForSeconds(respawnTime / 4);
-                Debug.Log(respawnTime);
-            }
-            if (ScoreManager.scorecount > 40)
-            {
-                yield return new WaitForSeconds(respawnTime / 5);
-                Debug.Log(respawnTime);
-            }
-
-            //while (EnemyCount < EnemyNumbers)
-            //{
-            //    System.Random randomX = new System.Random();
-            //    int randomNumberX = randomX.Next(-4, 4);
-            //    System.Random randomY = new System.Random();
-            //    int randomNumberY = randomY.Next(1, 5);
-            //    System.Random randomZ = new System.Random();
-            //    int randomNumberZ = randomZ.Next(12, 14);
-            //    Instantiate(Enemy, new Vector3(randomNumberX, randomNumberY, randomNumberZ), Quaternion.identity);
-            //    yield return new WaitForSeconds(respawnTime);
-            //    EnemyCount += 1;
-            //    //x += 1;
-            //    //y += 2;
-            //    //z += 3;
-
-            //}
+            yield return new WaitForSeconds(respawnTime);
+            
+         
         }
     }
     // Update is called once per frame
     void Update()
     {
-       
+      
+    
+     
     }
+
+
+    //if (ScoreManager.scorecount < 10)
+    //{
+    //    yield return new WaitForSeconds(respawnTime);
+    //}
+    //if (ScoreManager.scorecount > 10)
+    //{
+    //    yield return new WaitForSeconds(respawnTime);
+    //    Debug.Log(respawnTime);
+    //}
+    //if (ScoreManager.scorecount > 20)
+    //{
+    //    yield return new WaitForSeconds(respawnTime);
+    //    Debug.Log(respawnTime);
+    //}
+    //if (ScoreManager.scorecount > 30)
+    //{
+    //    yield return new WaitForSeconds(respawnTime);
+    //    Debug.Log(respawnTime);
+    //}
+    //if (ScoreManager.scorecount > 40)
+    //{
+    //    yield return new WaitForSeconds(respawnTime);
+    //    Debug.Log(respawnTime);
+    //}
+
+    //while (EnemyCount < EnemyNumbers)
+    //{
+    //    System.Random randomX = new System.Random();
+    //    int randomNumberX = randomX.Next(-4, 4);
+    //    System.Random randomY = new System.Random();
+    //    int randomNumberY = randomY.Next(1, 5);
+    //    System.Random randomZ = new System.Random();
+    //    int randomNumberZ = randomZ.Next(12, 14);
+    //    Instantiate(Enemy, new Vector3(randomNumberX, randomNumberY, randomNumberZ), Quaternion.identity);
+    //    yield return new WaitForSeconds(respawnTime);
+    //    EnemyCount += 1;
+    //    //x += 1;
+    //    //y += 2;
+    //    //z += 3;
+
+    //}
+
+
     //public void randomX()
     //{
     //    // Inicjalizacja generatora liczb losowych

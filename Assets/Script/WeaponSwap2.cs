@@ -12,7 +12,7 @@ public class WeaponSwap2 : MonoBehaviour
     public float fireSpeed = 20;
     public InputActionProperty shoot;
     private float lastFireTime = 0f;
-    private float fireCooldown = 1f;
+    private float fireCooldown = 0.5f;
     private bool Bpistol;
     //private bool Bshield;
 
