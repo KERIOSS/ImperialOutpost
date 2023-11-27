@@ -13,8 +13,8 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        XRGrabInteractable weapon = GetComponent<XRGrabInteractable>();
-        weapon.activated.AddListener(Fire);
+        //XRGrabInteractable weapon = GetComponent<XRGrabInteractable>();
+        //weapon.activated.AddListener(Fire);
     }
 
     private void Fire(ActivateEventArgs arg0)
