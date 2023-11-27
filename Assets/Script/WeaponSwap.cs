@@ -7,22 +7,42 @@ public class WeaponSwap : MonoBehaviour
 {
     public GameObject shield;
     public GameObject sword;
-    public InputActionProperty Swap;
-    private bool Bsword;
+    public GameObject lhand;
+    //public InputActionProperty Swap;
+    private bool Bsword= true;
+    private bool menuGame = false;
     //private bool Bshield;
     void Start()
     {
         shield.SetActive(false);
-        Bsword = true;
+        sword.SetActive(false);
+        lhand.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButtonDown("Jump") && menuGame == true)
         {
-            //ToggleModels();
+            Debug.Log("Menu Aktywne");
+            menuGame = false;
+            lhand.SetActive(true);
+            sword.SetActive(false);
+            shield.SetActive(false);
+
+        }
+        else if (Input.GetButtonDown("Jump") && menuGame == false)
+        {
+            Debug.Log("Menu off");
+            menuGame = true;
+            lhand.SetActive(false);
+            sword.SetActive(true);
+
+        }
+
+        if (Input.GetButtonDown("Fire3") && menuGame == true)
+        {
+       
           
 			if (Bsword==true)
 			{
@@ -38,15 +58,12 @@ public class WeaponSwap : MonoBehaviour
                 Bsword = true;
                 Debug.Log("Miecz aktywowany");
             }
-			//if (Bshield==true)
-			//{
-   //             shield.SetActive(false);
-   //             sword.SetActive(true);
-   //             Bshield = false;
-   //             Bsword = true;
-   //             Debug.Log("Miecz aktywowany");
-   //         }
+			
         }
+		else if (Input.GetButtonDown("Fire3") && menuGame == false)
+		{
+            Debug.Log("£apa active");
+		}
 
   //      if (Input.GetButtonDown("Fire1"))
   //      {

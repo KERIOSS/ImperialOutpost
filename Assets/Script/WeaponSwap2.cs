@@ -9,11 +9,14 @@ public class WeaponSwap2 : MonoBehaviour
     public GameObject pistol;
     public GameObject bullet;
     public Transform spawnPoint;
+    public GameObject rhand;
+    private bool menuGame = false;
+
     public float fireSpeed = 20;
     public InputActionProperty shoot;
     private float lastFireTime = 0f;
     private float fireCooldown = 0.5f;
-    private bool Bpistol;
+    private bool Bpistol = true;
     //private bool Bshield;
 
 
@@ -21,22 +24,44 @@ public class WeaponSwap2 : MonoBehaviour
     void Start()
     {
         shield.SetActive(false);
-        Bpistol = true;
+        pistol.SetActive(false);
+        rhand.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Jump") && menuGame == true)
+        {
+            Debug.Log("Menu Aktywne");
+            menuGame = false;
+            rhand.SetActive(true);
+            pistol.SetActive(false);
+            shield.SetActive(false);
+
+        }
+        else if (Input.GetButtonDown("Jump") && menuGame == false)
+        {
+            Debug.Log("Menu off");
+            menuGame = true;
+            rhand.SetActive(false);
+            pistol.SetActive(true);
+
+        }
+
+
+
+
         float triggerValue = shoot.action.ReadValue<float>();
 
-		if (triggerValue> 0)
+		if (triggerValue> 0 && menuGame == true )
 		{
             TryFire();
 
           
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && menuGame == true)
         {
             //ToggleModels();
 
@@ -56,9 +81,16 @@ public class WeaponSwap2 : MonoBehaviour
             }
            
         }
+		else if (Input.GetButtonDown("Fire3") && menuGame == false)
+        {
+            Debug.Log("£apa active");
 
-     
-	
+        }
+
+
+
+
+
     }
    void TryFire()
 	{

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShowMenu : MonoBehaviour
 {
-    private bool active = false;
+    private bool active = true;
     public GameObject menu;
     // Start is called before the first frame update
     void Start()
