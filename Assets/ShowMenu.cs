@@ -10,6 +10,7 @@ public class ShowMenu : MonoBehaviour
     void Start()
     {
         //menu.SetActive(false);
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -33,6 +34,7 @@ public class ShowMenu : MonoBehaviour
         {
             menu.SetActive(true);
             Debug.Log("f4t");
+            Time.timeScale = 0;
             active = true;
         }
        
@@ -44,6 +46,8 @@ public class ShowMenu : MonoBehaviour
         {
             menu.SetActive(false);
             Debug.Log("f4f");
+            Time.timeScale = 1;
+
             active = false;
 
         }
