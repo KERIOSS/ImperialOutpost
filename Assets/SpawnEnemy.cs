@@ -12,7 +12,6 @@ public class SpawnEnemy : MonoBehaviour
      int EnemyCount;
     public int respawnTime;
     public int EnemyNumbers;
-    // Start is called before the first frame update
 
 
     void Start()
@@ -38,7 +37,6 @@ public class SpawnEnemy : MonoBehaviour
          
         }
     }
-    // Update is called once per frame
     void Update()
     {
       

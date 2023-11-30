@@ -11,16 +11,11 @@ public class WeaponSwap2 : MonoBehaviour
     public Transform spawnPoint;
     public GameObject rhand;
     private bool menuGame = false;
-
     public float fireSpeed = 20;
     public InputActionProperty shoot;
     private float lastFireTime = 0f;
     private float fireCooldown = 0.5f;
     private bool Bpistol = true;
-    //private bool Bshield;
-
-
-
     void Start()
     {
         shield.SetActive(false);
@@ -49,16 +44,11 @@ public class WeaponSwap2 : MonoBehaviour
 
         }
 
-
-
-
         float triggerValue = shoot.action.ReadValue<float>();
 
 		if (triggerValue> 0 && menuGame == true )
 		{
             TryFire();
-
-          
         }
 
         if (Input.GetButtonDown("Fire1") && menuGame == true)
@@ -84,13 +74,7 @@ public class WeaponSwap2 : MonoBehaviour
 		else if (Input.GetButtonDown("Fire3") && menuGame == false)
         {
             Debug.Log("£apa active");
-
         }
-
-
-
-
-
     }
    void TryFire()
 	{

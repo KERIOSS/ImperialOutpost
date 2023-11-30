@@ -13,13 +13,10 @@ public class EnemyShoot : MonoBehaviour
     public GameObject enemyBullet;
     public Transform spawnEnemyBulletPoint;
     public float enemySpeed;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (spawnEnemyBulletPoint != null)

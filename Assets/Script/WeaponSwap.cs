@@ -8,10 +8,9 @@ public class WeaponSwap : MonoBehaviour
     public GameObject shield;
     public GameObject sword;
     public GameObject lhand;
-    //public InputActionProperty Swap;
+
     private bool Bsword= true;
     private bool menuGame = false;
-    //private bool Bshield;
     void Start()
     {
         shield.SetActive(false);
@@ -19,7 +18,6 @@ public class WeaponSwap : MonoBehaviour
         lhand.SetActive(true);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Jump") && menuGame == true)
@@ -65,43 +63,7 @@ public class WeaponSwap : MonoBehaviour
             Debug.Log("£apa active");
 		}
 
-  //      if (Input.GetButtonDown("Fire1"))
-  //      {
-  //          Debug.Log("Przycisk3");
-  //      }
-  //      if (Input.GetButtonDown("Fire2"))
-		//{
-  //          Debug.Log("Przycisk2");
-		//}
-     
-       
-  //      if (Input.GetButtonDown("Jump"))
-  //      {
-  //          Debug.Log("Przycisk4");
-  //      }
-
     }
-
-    //private void ToggleModels()
-    //{
-      
-    //        if (handActive==true)
-    //        {
-    //            shield.SetActive(false);
-    //            sword.SetActive(true);
-    //            handActive = false;
-    //            kloc.SetActive(false);
-    //        }
-    //        else
-    //        {
-    //            shield.SetActive(true);
-    //            sword.SetActive(false);
-    //             handActive = false;
-    //           kloc.SetActive(true);
-    //    }
-    //        Debug.Log("wa");
-        
-    //}
 
 
 }
