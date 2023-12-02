@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3741859315031666754}
   - component: {fileID: 2618337807740672832}
   - component: {fileID: -3285813050916625886}
+  - component: {fileID: 4467686471514495301}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: enemybullet
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843472338697435121}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 987542aadb47f2c4a9ad589b67b3d91d, type: 3}
   m_Name: 
@@ -132,3 +133,16 @@ MonoBehaviour:
   distanceOfPlayer: 0
   fow: 77
   player: {fileID: 9087882652070817029, guid: e9276bcf75bd4a64bb09f679d3dff606, type: 3}
+--- !u!114 &4467686471514495301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843472338697435121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985e7c3dff579f74aa05ebc66a07dc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 10
