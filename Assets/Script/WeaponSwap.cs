@@ -22,7 +22,7 @@ public class WeaponSwap : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && menuGame == true)
         {
-            Debug.Log("Menu Aktywne");
+            //Debug.Log("Menu Aktywne");
             menuGame = false;
             lhand.SetActive(true);
             sword.SetActive(false);
@@ -31,7 +31,7 @@ public class WeaponSwap : MonoBehaviour
         }
         else if (Input.GetButtonDown("Jump") && menuGame == false)
         {
-            Debug.Log("Menu off");
+            //Debug.Log("Menu off");
             menuGame = true;
             lhand.SetActive(false);
             sword.SetActive(true);
@@ -47,14 +47,14 @@ public class WeaponSwap : MonoBehaviour
                 sword.SetActive(false);
                 shield.SetActive(true);
                 Bsword = false;
-                Debug.Log("tarcza aktywowana");
+                //Debug.Log("tarcza aktywowana");
             }
 			else
 			{
                 shield.SetActive(false);
                 sword.SetActive(true);
                 Bsword = true;
-                Debug.Log("Miecz aktywowany");
+                //Debug.Log("Miecz aktywowany");
             }
 			
         }

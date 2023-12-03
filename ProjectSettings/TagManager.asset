@@ -7,6 +7,7 @@ TagManager:
   - target
   - bullet
   - enemybullet
+  - ChargeEnemy
   layers:
   - Default
   - TransparentFX
