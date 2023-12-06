@@ -28,7 +28,7 @@ public class SpawnEnemy : MonoBehaviour
             System.Random randomX = new System.Random();
             int randomNumberX = randomX.Next(-4, 4);
             System.Random randomY = new System.Random();
-            int randomNumberY = randomY.Next(1, 2);
+            int randomNumberY = randomY.Next(1, 6);
 			System.Random randomZ = new System.Random();
 			int randomNumberZ = randomZ.Next(12, 14);
 			Instantiate(Enemy, new Vector3(randomNumberX, randomNumberY, randomNumberZ), Quaternion.identity);

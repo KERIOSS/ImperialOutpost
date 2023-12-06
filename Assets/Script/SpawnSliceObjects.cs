@@ -29,7 +29,7 @@ public class SpawnSliceObjects : MonoBehaviour
             System.Random randomX = new System.Random();
             int randomNumberX = randomX.Next(-4, 4);
             System.Random randomY = new System.Random();
-            int randomNumberY = randomY.Next(1, 2);
+            int randomNumberY = randomY.Next(1, 4);
             System.Random randomZ = new System.Random();
             int randomNumberZ = randomZ.Next(5, 12);
             Instantiate(Enemy, new Vector3(randomNumberX, randomNumberY, randomNumberZ), Quaternion.identity);

@@ -23,7 +23,8 @@ public class ShowMenu : MonoBehaviour
     }
     private void Show()
     {
-        if (Input.GetButtonDown("Jump"))
+        
+        if (Input.GetButtonDown("Jump")||Input.GetKeyDown(KeyCode.Space))
         {
             menu.SetActive(true);
             Debug.Log("f4t");
@@ -33,7 +34,7 @@ public class ShowMenu : MonoBehaviour
     }
     private void Close()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space))
         {
             menu.SetActive(false);
             Debug.Log("f4f");

@@ -42,7 +42,7 @@ public class Shields : MonoBehaviour
 		if (HP <=0)
 		{
             OutOfShield();
-            Invoke("ShieldBackOn", 5f); 
+            Invoke("ShieldBackOn", 1f); 
         }
         
     }

@@ -13,6 +13,7 @@ public class EnemyShoot : MonoBehaviour
     public GameObject enemyBullet;
     public Transform spawnEnemyBulletPoint;
     public float enemySpeed;
+    public GameObject GunFire;
     void Start()
     {
         
@@ -21,7 +22,7 @@ public class EnemyShoot : MonoBehaviour
     {
         if (spawnEnemyBulletPoint != null)
         {
-            Invoke("ShootAtPlayer", TimeBeforeFirstShoot); 
+            Invoke("ShootAtPlayer", timer); 
         }
     }
     void ShootAtPlayer()
@@ -29,11 +30,15 @@ public class EnemyShoot : MonoBehaviour
         bulletTime -= Time.deltaTime;
         if (bulletTime > 0) return;
         bulletTime = timer;
+        fired();
         GameObject bulletObj = Instantiate(enemyBullet, spawnEnemyBulletPoint.transform.position, spawnEnemyBulletPoint.transform.rotation) as GameObject;
+        
         Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
         bulletRig.AddForce(bulletRig.transform.forward * enemySpeed);
         Destroy(bulletObj, 5f);
     }
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("bullet"))
@@ -41,5 +46,14 @@ public class EnemyShoot : MonoBehaviour
             Destroy(collision.gameObject);
          }
     }
+    void fired()
+    {
+        GunFire.SetActive(true);
+        Invoke("outofire", 1f);
+    }
+    void outofire()
+    {
+        GunFire.SetActive(false);
 
+    }
 }
