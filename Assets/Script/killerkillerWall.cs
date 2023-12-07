@@ -21,14 +21,15 @@ public class killerkillerWall : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-     
-
         }
         if (collision.gameObject.CompareTag("enemybullet"))
         {
             Destroy(collision.gameObject);
 
-
+        }
+        if (collision.gameObject.CompareTag("ChargeEnemy"))
+        {
+            Destroy(collision.gameObject);
 
         }
     }

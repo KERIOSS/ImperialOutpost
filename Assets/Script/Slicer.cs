@@ -5,7 +5,12 @@ public class Slicer : MonoBehaviour
     public Material materialAfterSlice;
     public LayerMask sliceMask;
     public bool isTouched;
+    AudioSource cut;
+    private void Start()
+    {
+        cut = GetComponent<AudioSource>();
 
+    }
     private void Update()
     {
         if (isTouched == true)
@@ -36,11 +41,14 @@ public class Slicer : MonoBehaviour
         collider.convex = true;
         rb.AddExplosionForce(100, obj.transform.position, 1);
         ScoreManager.scorecount += 1;
+        cut.Play();
+
     }
-   
+
     private SlicedHull SliceObject(GameObject obj, Material crossSectionMaterial = null)
     {
         return obj.Slice(transform.position, transform.up, crossSectionMaterial);
+
     }
 
 

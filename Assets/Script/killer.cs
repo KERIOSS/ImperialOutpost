@@ -23,6 +23,10 @@ public class killer : MonoBehaviour
             Destroy(collision.gameObject);
             
         }
-   
+        if (collision.gameObject.CompareTag("enemybullet"))
+        {
+            Destroy(collision.gameObject);
+
+        }
     }
 }

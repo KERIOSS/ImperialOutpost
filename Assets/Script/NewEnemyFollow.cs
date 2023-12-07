@@ -46,11 +46,19 @@ public class NewEnemyFollow : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("target"))
         {
-            //Debug.Log("Gracz zosta³ trafiony!");
-
+            Debug.Log("EnemyBulletDestroy");
             Destroy(gameObject);
             
         }
+        if (collision.gameObject.CompareTag("enemybullet"))
+        {
+            Destroy(collision.gameObject);
 
+        }
+        if (collision.gameObject.CompareTag("bullet"))
+        {
+            Destroy(collision.gameObject);
+
+        }
     }
 }
