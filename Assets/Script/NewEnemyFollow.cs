@@ -44,6 +44,13 @@ public class NewEnemyFollow : MonoBehaviour
             Destroy(gameObject);
             ScoreManager.hppoint -= 1;
         }
+        if (collision.gameObject.CompareTag("target"))
+        {
+            //Debug.Log("Gracz zosta³ trafiony!");
+
+            Destroy(gameObject);
+            
+        }
 
     }
 }

@@ -16,8 +16,10 @@ public class WeaponSwap2 : MonoBehaviour
     private float lastFireTime = 0f;
     private float fireCooldown = 0.5f;
     private bool Bpistol = true;
+    AudioSource pach;
     void Start()
     {
+        pach = GetComponent<AudioSource>();
         shield.SetActive(false);
         pistol.SetActive(false);
         rhand.SetActive(true);
@@ -82,8 +84,13 @@ public class WeaponSwap2 : MonoBehaviour
         {
             Fire(); 
             lastFireTime = Time.time;
+            FireSound();
         }
     } 
+    void FireSound()
+	{
+        pach.Play(); 
+	}
     void Fire()
 	{
         GameObject spawnedbullet = Instantiate(bullet);

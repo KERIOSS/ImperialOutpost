@@ -14,9 +14,11 @@ public class EnemyShoot : MonoBehaviour
     public Transform spawnEnemyBulletPoint;
     public float enemySpeed;
     public GameObject GunFire;
+    AudioSource laser;
     void Start()
     {
-        
+        laser = GetComponent<AudioSource>();
+
     }
     void Update()
     {
@@ -27,15 +29,17 @@ public class EnemyShoot : MonoBehaviour
     }
     void ShootAtPlayer()
     {
+      
         bulletTime -= Time.deltaTime;
         if (bulletTime > 0) return;
         bulletTime = timer;
-        fired();
         GameObject bulletObj = Instantiate(enemyBullet, spawnEnemyBulletPoint.transform.position, spawnEnemyBulletPoint.transform.rotation) as GameObject;
         
         Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
         bulletRig.AddForce(bulletRig.transform.forward * enemySpeed);
-        Destroy(bulletObj, 5f);
+        Destroy(bulletObj, 5f); 
+        fired();
+        PlaySound();
     }
 
 
@@ -50,10 +54,17 @@ public class EnemyShoot : MonoBehaviour
     {
         GunFire.SetActive(true);
         Invoke("outofire", 1f);
+
+
     }
     void outofire()
     {
         GunFire.SetActive(false);
+
+    }
+    void PlaySound()
+	{
+        laser.Play();
 
     }
 }
