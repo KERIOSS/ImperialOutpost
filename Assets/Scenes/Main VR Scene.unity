@@ -7387,10 +7387,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1242817248}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1242817254}
+        m_TargetAssemblyTypeName: HideMenu, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7450,6 +7450,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 1863561130}
+  sword: {fileID: 1122699587}
+  pistol: {fileID: 4511655669145257979}
+  lh: {fileID: 109434732788851486}
+  rh: {fileID: 5686134209918397226}
 --- !u!1 &1243999289
 GameObject:
   m_ObjectHideFlags: 0
