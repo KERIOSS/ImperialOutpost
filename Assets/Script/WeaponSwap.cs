@@ -8,9 +8,14 @@ public class WeaponSwap : MonoBehaviour
     public GameObject shield;
     public GameObject sword;
     public GameObject lhand;
+    public HideMenu button;
+    public ShowMenu activity;
+    private bool menuStatus;
+    //private bool clicked = false;
+    //private bool Bsword= true;
+    //private bool menuGame = false;
 
-    private bool Bsword= true;
-    private bool menuGame = false;
+
     void Start()
     {
         shield.SetActive(false);
@@ -20,48 +25,62 @@ public class WeaponSwap : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && menuGame == true)
-        {
-            //Debug.Log("Menu Aktywne");
-            menuGame = false;
+
+        //if (Input.GetButtonDown("Jump") && menuGame == true)
+        //{
+        //    //Debug.Log("Menu Aktywne");
+        //    menuGame = false;
+        //    lhand.SetActive(true);
+        //    sword.SetActive(false);
+        //    shield.SetActive(false);
+
+        //}
+        //else if (Input.GetButtonDown("Jump")||clicked==true && menuGame == false)
+        //{
+        //    //Debug.Log("Menu off");
+        //    menuGame = true;
+        //    lhand.SetActive(false);
+        //    sword.SetActive(true);
+
+        //}
+        menuStatus = activity.active;
+
+        if (menuStatus==true)
+		{
             lhand.SetActive(true);
             sword.SetActive(false);
-            shield.SetActive(false);
-
-        }
-        else if (Input.GetButtonDown("Jump") && menuGame == false)
-        {
-            //Debug.Log("Menu off");
-            menuGame = true;
+		}
+		else
+		{
             lhand.SetActive(false);
             sword.SetActive(true);
+		}
 
-        }
 
-        if (Input.GetButtonDown("Fire3") && menuGame == true)
-        {
+  //      if (Input.GetButtonDown("Fire3") && menuGame == true)
+  //      {
        
           
-			if (Bsword==true)
-			{
-                sword.SetActive(false);
-                shield.SetActive(true);
-                Bsword = false;
-                //Debug.Log("tarcza aktywowana");
-            }
-			else
-			{
-                shield.SetActive(false);
-                sword.SetActive(true);
-                Bsword = true;
-                //Debug.Log("Miecz aktywowany");
-            }
+		//	if (Bsword==true)
+		//	{
+  //              sword.SetActive(false);
+  //              shield.SetActive(true);
+  //              Bsword = false;
+  //              //Debug.Log("tarcza aktywowana");
+  //          }
+		//	else
+		//	{
+  //              shield.SetActive(false);
+  //              sword.SetActive(true);
+  //              Bsword = true;
+  //              //Debug.Log("Miecz aktywowany");
+  //          }
 			
-        }
-		else if (Input.GetButtonDown("Fire3") && menuGame == false)
-		{
-            Debug.Log("£apa active");
-		}
+  //      }
+		//else if (Input.GetButtonDown("Fire3") && menuGame == false)
+		//{
+  //          Debug.Log("£apa active");
+		//}
 
     }
 

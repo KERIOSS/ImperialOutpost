@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class ShowMenu : MonoBehaviour
 {
-    private bool active = true;
+    public bool active = true;
     public GameObject menu;
+    public HideMenu button;
+    private bool clicked = false;
     void Start()
     {
         Time.timeScale = 0;
     }
     void Update()
     {
-		if (active==false)
-		{
+        clicked = button.buttonActive;
+
+        ShowSystem();
+        
+    }
+    public void ShowSystem()
+	{        
+        if (active == false)
+        {
             Show();
         }
-		else
-		{
+        else
+        {
             Close();
-		}
+        }
+		
     }
     private void Show()
     {
@@ -34,7 +44,7 @@ public class ShowMenu : MonoBehaviour
     }
     private void Close()
     {
-        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space) || clicked == true)
         {
             menu.SetActive(false);
             Debug.Log("f4f");
