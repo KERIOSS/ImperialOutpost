@@ -44,8 +44,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7314959, g: 0.85882354, b: 0.31372547, a: 1}
-  m_Intensity: 10
+  m_Color: {r: 0.8207547, g: 0.68958163, b: 0.08904416, a: 1}
+  m_Intensity: 3
   m_Range: 0.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -254,7 +254,7 @@ MonoBehaviour:
     type: 3}
   spawnEnemyBulletPoint: {fileID: 182452919902622795}
   enemySpeed: 5
-  GunFire: {fileID: 6763186340652812}
+  GunFire: {fileID: 5744456698693795305}
 --- !u!114 &3024946708270933063
 MonoBehaviour:
   m_ObjectHideFlags: 0

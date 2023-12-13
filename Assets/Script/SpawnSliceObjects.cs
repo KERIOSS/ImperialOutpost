@@ -36,12 +36,6 @@ public class SpawnSliceObjects : MonoBehaviour
             yield return new WaitForSeconds(respawnTime);
 
           
-            //EnemyCount += 1;
-
-
-            //x += 1;
-            //y += 2;
-            //z += 3;
 
         }
     }

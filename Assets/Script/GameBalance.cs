@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GameBalance : MonoBehaviour
 {
-    public GameObject secondSpawner;
+    public GameObject extraSpawner;
     public int score;
     // Start is called before the first frame update
     void Start()
     {
-        secondSpawner.SetActive(false);
+        extraSpawner.SetActive(false);
     }
 
     // Update is called once per frame
@@ -17,8 +17,8 @@ public class GameBalance : MonoBehaviour
     {
 		if(ScoreManager.scorecount>score)
 		{
-            Debug.Log("Poziom2");
-            secondSpawner.SetActive(true);
+            Debug.Log("Next level");
+            extraSpawner.SetActive(true);
 		} 
     }
 }
