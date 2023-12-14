@@ -10,12 +10,12 @@ public class WeaponSwap2 : MonoBehaviour
     public GameObject bullet;
     public Transform spawnPoint;
     public GameObject rhand;
-    private bool menuGame = false;
+    //private bool menuGame = false;
     public float fireSpeed = 20;
     public InputActionProperty shoot;
     private float lastFireTime = 0f;
     private float fireCooldown = 0.5f;
-    private bool Bpistol = true;
+    //private bool Bpistol = true;
     AudioSource pach;
 
     public ShowMenu activity;

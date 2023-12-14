@@ -13,6 +13,11 @@ public class Slicer : MonoBehaviour
     }
     private void Update()
     {
+        CreateCutFragment();
+        
+    }
+    private void CreateCutFragment()
+	{
         if (isTouched == true)
         {
             isTouched = false;
@@ -26,13 +31,12 @@ public class Slicer : MonoBehaviour
                 lowerHullGameobject.transform.position = objectToBeSliced.transform.position;
                 MakeItPhysical(upperHullGameobject);
                 MakeItPhysical(lowerHullGameobject);
-                Destroy(upperHullGameobject, 5f);
-                Destroy(lowerHullGameobject, 5f);
+                Destroy(upperHullGameobject, 1f);
+                Destroy(lowerHullGameobject, 1f);
 
                 Destroy(objectToBeSliced.gameObject);
             }
         }
-        
     }
     private void MakeItPhysical(GameObject obj)
     {
