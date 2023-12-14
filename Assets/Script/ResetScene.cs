@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ResetScene : MonoBehaviour
 {
     public string sceneToLoad = "Main VR Scene";
-
+    //public GameObject deadMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +17,13 @@ public class ResetScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (ScoreManager.hppoint==0)
-		{
-            Debug.Log("Reset Poziomu");
-            SceneManager.LoadScene(sceneToLoad);
-
-        }
+		//if (ScoreManager.hppoint<=0)
+		//{
+  //          Debug.Log("Reset Poziomu");
+		//	SceneManager.LoadScene(sceneToLoad);
+		//	//deadMenu.SetActive(true);
+  // //         Time.timeScale = 0;
+  //      }
     }
     private void OnCollisionEnter(Collision collision)
     {

@@ -9,9 +9,10 @@ public class ScoreManager : MonoBehaviour
     public Text hpText;
     public static int scorecount;
     public static int hppoint;
-
+    public int scoreToUpload;
     void Start()
     {
+        
         scorecount = 0;
         hppoint = 100;
     }
@@ -22,6 +23,7 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = "Score: " + Mathf.Round(scorecount);
         hpText.text = "HP: " + Mathf.Round(hppoint);
+        scoreToUpload = scorecount;
     }
 
 	

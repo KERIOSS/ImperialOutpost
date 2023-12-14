@@ -6,18 +6,27 @@ public class ShowMenu : MonoBehaviour
 {
     public bool active = true;
     public GameObject menu;
+    public GameObject deathPanel;
     public HideMenu button;
     private bool clicked = false;
+    private bool dead;
     void Start()
     {
+        dead = false;
         Time.timeScale = 0;
     }
     void Update()
     {
         clicked = button.buttonActive;
-
+        zeroHP();
         ShowSystem();
-        
+		if (dead ==true)
+		{
+            menu.SetActive(true);
+            Time.timeScale = 0;
+            active = true;
+            ShowDeathPanel();
+        }
     }
     public void ShowSystem()
 	{        
@@ -25,7 +34,7 @@ public class ShowMenu : MonoBehaviour
         {
             Show();
         }
-        else
+	    else
         {
             Close();
         }
@@ -52,4 +61,15 @@ public class ShowMenu : MonoBehaviour
             active = false;
         }
     }
+    private void zeroHP()
+	{
+		if (ScoreManager.hppoint<=0)
+		{
+            dead = true;
+		}
+	}
+    private void ShowDeathPanel()
+	{
+        deathPanel.SetActive(true);
+	}
 }
