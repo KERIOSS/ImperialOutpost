@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class WeaponSwap2 : MonoBehaviour
 {
-    public GameObject shield;
+    //public GameObject shield;
     public GameObject pistol;
     public GameObject bullet;
     public Transform spawnPoint;
@@ -17,13 +17,12 @@ public class WeaponSwap2 : MonoBehaviour
     private float fireCooldown = 0.5f;
     //private bool Bpistol = true;
     AudioSource pach;
-
     public ShowMenu activity;
     private bool menuStatus;
     void Start()
     {
         pach = GetComponent<AudioSource>();
-        shield.SetActive(false);
+        //shield.SetActive(false);
         pistol.SetActive(false);
         rhand.SetActive(true);
     }
@@ -42,58 +41,11 @@ public class WeaponSwap2 : MonoBehaviour
             rhand.SetActive(false);
             pistol.SetActive(true);
         }
-
         float triggerValue = shoot.action.ReadValue<float>();
-
         if (triggerValue > 0 && menuStatus == false)
         {
             TryFire();
         }
-
-        //if (Input.GetButtonDown("Jump") && menuGame == true)
-        //{
-        //    Debug.Log("Menu Aktywne");
-        //    menuGame = false;
-        //    rhand.SetActive(true);
-        //    pistol.SetActive(false);
-        //    shield.SetActive(false);
-
-        //}
-        //else if (Input.GetButtonDown("Jump") && menuGame == false)
-        //{
-        //    Debug.Log("Menu off");
-        //    menuGame = true;
-        //    rhand.SetActive(false);
-        //    pistol.SetActive(true);
-
-        //}
-
-
-
-        //      if (Input.GetButtonDown("Fire1") && menuGame == true)
-        //      {
-        //          //ToggleModels();
-
-        //          if (Bpistol == true)
-        //          {
-        //              pistol.SetActive(false);
-        //              shield.SetActive(true);
-        //              Bpistol = false;
-        //              Debug.Log("Tarcza aktywowana");
-        //          }
-        //          else
-        //          {
-        //              shield.SetActive(false);
-        //              pistol.SetActive(true);
-        //              Bpistol = true;
-        //              Debug.Log("Pistolet aktywowany");
-        //          }
-
-        //      }
-        //else if (Input.GetButtonDown("Fire3") && menuGame == false)
-        //      {
-        //          Debug.Log("£apa active");
-        //      }
     }
    void TryFire()
 	{

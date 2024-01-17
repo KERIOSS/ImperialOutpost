@@ -35,6 +35,11 @@ public class killerkiller : MonoBehaviour
  
             ScoreManager.scorecount += 1;
         }
+        if (collision.gameObject.CompareTag("leftBullet"))
+        {
+            Destroy(collision.gameObject);
+
+        }
     }
 
    

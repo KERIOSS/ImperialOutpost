@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NewEnemyFollow : MonoBehaviour
 {
-    public float bulletSpeed = 10f;
+    public float objectSpeed ;
     private Transform player;
     private Vector3 initialPlayerPosition;
 
@@ -18,15 +18,12 @@ public class NewEnemyFollow : MonoBehaviour
             return;
         }
 
-        // Zapamiêtujemy pocz¹tkow¹ pozycjê gracza
         initialPlayerPosition = player.position;
 
-        // Ustawiamy prêdkoœæ pocz¹tkow¹ w kierunku punktu, w którym gracz siê znajdowa³
         Vector3 directionToInitialPosition = initialPlayerPosition - transform.position;
         Vector3 normalizedDirection = directionToInitialPosition.normalized;
-        GetComponent<Rigidbody>().velocity = normalizedDirection * bulletSpeed;
+        GetComponent<Rigidbody>().velocity = normalizedDirection * objectSpeed;
 
-        // Obracamy pocisk w kierunku ruchu
         transform.rotation = Quaternion.LookRotation(normalizedDirection);
     }
 
@@ -39,26 +36,25 @@ public class NewEnemyFollow : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("Gracz zosta³ trafiony!");
-
             Destroy(gameObject);
-            ScoreManager.hppoint -= 105;
+            ScoreManager.hppoint -= 1;
         }
         if (collision.gameObject.CompareTag("target"))
         {
             Debug.Log("EnemyBulletDestroy");
             Destroy(gameObject);
-            
         }
         if (collision.gameObject.CompareTag("enemybullet"))
         {
             Destroy(collision.gameObject);
-
         }
         if (collision.gameObject.CompareTag("bullet"))
         {
             Destroy(collision.gameObject);
-
+        }
+        if (collision.gameObject.CompareTag("leftBullet"))
+        {
+            Destroy(collision.gameObject);
         }
     }
 }

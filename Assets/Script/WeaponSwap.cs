@@ -5,84 +5,66 @@ using UnityEngine.InputSystem;
 
 public class WeaponSwap : MonoBehaviour
 {
-    public GameObject shield;
-    public GameObject sword;
+    //public GameObject shield;
+    public GameObject pistol;
+    public GameObject bullet;
+    public Transform spawnPoint;
     public GameObject lhand;
-    public HideMenu button;
+    public float fireSpeed = 20;
+    public InputActionProperty shoot;
+    private float lastFireTime = 0f;
+    private float fireCooldown = 0.5f;
+    AudioSource pach;
     public ShowMenu activity;
     private bool menuStatus;
-    //private bool clicked = false;
-    //private bool Bsword= true;
-    //private bool menuGame = false;
-
-
     void Start()
     {
-        shield.SetActive(false);
-        sword.SetActive(false);
+        pach = GetComponent<AudioSource>();
+        //shield.SetActive(false);
+        pistol.SetActive(false);
         lhand.SetActive(true);
     }
 
+    // Update is called once per frame
     void Update()
     {
-
-        //if (Input.GetButtonDown("Jump") && menuGame == true)
-        //{
-        //    //Debug.Log("Menu Aktywne");
-        //    menuGame = false;
-        //    lhand.SetActive(true);
-        //    sword.SetActive(false);
-        //    shield.SetActive(false);
-
-        //}
-        //else if (Input.GetButtonDown("Jump")||clicked==true && menuGame == false)
-        //{
-        //    //Debug.Log("Menu off");
-        //    menuGame = true;
-        //    lhand.SetActive(false);
-        //    sword.SetActive(true);
-
-        //}
         menuStatus = activity.active;
-
-        if (menuStatus==true)
-		{
+        if (menuStatus == true)
+        {
             lhand.SetActive(true);
-            sword.SetActive(false);
-		}
-		else
-		{
+            pistol.SetActive(false);
+        }
+        else
+        {
             lhand.SetActive(false);
-            sword.SetActive(true);
-		}
+            pistol.SetActive(true);
+        }
 
+        float triggerValue = shoot.action.ReadValue<float>();
 
-  //      if (Input.GetButtonDown("Fire3") && menuGame == true)
-  //      {
-       
-          
-		//	if (Bsword==true)
-		//	{
-  //              sword.SetActive(false);
-  //              shield.SetActive(true);
-  //              Bsword = false;
-  //              //Debug.Log("tarcza aktywowana");
-  //          }
-		//	else
-		//	{
-  //              shield.SetActive(false);
-  //              sword.SetActive(true);
-  //              Bsword = true;
-  //              //Debug.Log("Miecz aktywowany");
-  //          }
-			
-  //      }
-		//else if (Input.GetButtonDown("Fire3") && menuGame == false)
-		//{
-  //          Debug.Log("£apa active");
-		//}
-
+        if (triggerValue > 0 && menuStatus == false)
+        {
+            TryFire();
+        }   
     }
-
-
+    void TryFire()
+    {
+        if (Time.time - lastFireTime > fireCooldown)
+        {
+            Fire();
+            lastFireTime = Time.time;
+            FireSound();
+        }
+    }
+    void FireSound()
+    {
+        pach.Play();
+    }
+    void Fire()
+    {
+        GameObject spawnedbullet = Instantiate(bullet);
+        spawnedbullet.transform.position = spawnPoint.position;
+        spawnedbullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+        Destroy(spawnedbullet, 5);
+    }
 }
